@@ -12,3 +12,17 @@ C:\Users\fabio\Desktop\cadastro\obj\Debug\netcoreapp2.2\cadastro.AssemblyInfo.cs
 C:\Users\fabio\Desktop\cadastro\obj\Debug\netcoreapp2.2\cadastro.RazorTargetAssemblyInfo.cache
 C:\Users\fabio\Desktop\cadastro\obj\Debug\netcoreapp2.2\cadastro.dll
 C:\Users\fabio\Desktop\cadastro\obj\Debug\netcoreapp2.2\cadastro.pdb
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\bin\Debug\netcoreapp2.2\cadastro.deps.json
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\bin\Debug\netcoreapp2.2\cadastro.runtimeconfig.json
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\bin\Debug\netcoreapp2.2\cadastro.runtimeconfig.dev.json
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\bin\Debug\netcoreapp2.2\cadastro.dll
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\bin\Debug\netcoreapp2.2\cadastro.pdb
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\obj\Debug\netcoreapp2.2\cadastro.csprojAssemblyReference.cache
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\obj\Debug\netcoreapp2.2\cadastro.csproj.CoreCompileInputs.cache
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\obj\Debug\netcoreapp2.2\cadastro.RazorAssemblyInfo.cache
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\obj\Debug\netcoreapp2.2\cadastro.RazorAssemblyInfo.cs
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\obj\Debug\netcoreapp2.2\cadastro.AssemblyInfoInputs.cache
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\obj\Debug\netcoreapp2.2\cadastro.AssemblyInfo.cs
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\obj\Debug\netcoreapp2.2\cadastro.RazorTargetAssemblyInfo.cache
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\obj\Debug\netcoreapp2.2\cadastro.dll
+C:\Users\fabio\Desktop\experimento swagger\ApiCadastro\obj\Debug\netcoreapp2.2\cadastro.pdb

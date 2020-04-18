@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\fabio\\Desktop\\cadastro\\cadastro.csproj": {}
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\ApiCadastro\\cadastro.csproj": {}
   },
   "projects": {
-    "C:\\Users\\fabio\\Desktop\\cadastro\\cadastro.csproj": {
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\ApiCadastro\\cadastro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\fabio\\Desktop\\cadastro\\cadastro.csproj",
+        "projectUniqueName": "C:\\Users\\fabio\\Desktop\\experimento swagger\\ApiCadastro\\cadastro.csproj",
         "projectName": "cadastro",
-        "projectPath": "C:\\Users\\fabio\\Desktop\\cadastro\\cadastro.csproj",
+        "projectPath": "C:\\Users\\fabio\\Desktop\\experimento swagger\\ApiCadastro\\cadastro.csproj",
         "packagesPath": "C:\\Users\\fabio\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\fabio\\Desktop\\cadastro\\obj\\",
+        "outputPath": "C:\\Users\\fabio\\Desktop\\experimento swagger\\ApiCadastro\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
