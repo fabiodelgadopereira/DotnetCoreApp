@@ -15,6 +15,8 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore;
+using cadastro.Models;
+using cadastro.Data;
 
 namespace cadastro {
     public class Startup {
@@ -26,7 +28,7 @@ namespace cadastro {
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices (IServiceCollection services) {
-
+             services.AddScoped<ClienteRepository>();
             //especifica o esquema usado para autenticacao do tipo Bearer
             // e 
             //define configurações como chave,algoritmo,validade, data expiracao...
