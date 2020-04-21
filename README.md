@@ -19,7 +19,7 @@ https://localhost:5001/swagger
 
 O ASP.NET Core é framework cross-platform com código-fonte aberto para a criação de aplicativos modernos. Você pode ler os Fundamentos básicos do ASP.NET na documentação da Microsoft. O padrão de arquitetura MVC (Model-View-Controller) separa um aplicativo em três grupos principais de componentes: Model-View-Controller (MVC) . Esse padrão ajuda a alcançar o princípio de designer de separação de interesses.
 
-![GitHub Logo](/img/MVC.PNG)
+![GitHub Logo](/img/MVC.png)
 
 ### Swagger
 
