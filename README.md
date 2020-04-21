@@ -1,6 +1,6 @@
 ### Autor: Fábio Delgado
 
-Bem-vindo! Aqui ol
+Olá! Seja bem vindo ;)
 
 ## Índice
 1. [ApiCadastro](#ApiCadastro)
@@ -78,7 +78,53 @@ fonte: https://swagger.io/resources/webinars/getting-started-with-swagger/
 ```shell
 dotnet add package Swashbuckle.AspNetCore
 ```
+#### Adicionando e connfigurando o Swagger middleware
 
+> Na classe `Startup`, importe o seguinte namespace para utilização da classe `OpenApiInfo`:
+
+```C#
+using Microsoft.OpenApi.Models;
+```
+
+> Adicione o gerador Swagger à coleção de serviços no método Startup.ConfigureServices:
+
+```C#
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddDbContext<TodoContext>(opt =>
+        opt.UseInMemoryDatabase("TodoList"));
+    services.AddControllers();
+
+    // Register the Swagger generator, defining 1 or more Swagger documents
+    services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+    });
+}
+```
+
+> No método Startup.Configure, ative o middleware para servir o documento JSON gerado e a interface do usuário do Swagger:
+
+```C#
+public void Configure(IApplicationBuilder app)
+{
+    // Enable middleware to serve generated Swagger as a JSON endpoint.
+    app.UseSwagger();
+
+    // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
+    // specifying the Swagger JSON endpoint.
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    });
+
+    app.UseRouting();
+    app.UseEndpoints(endpoints =>
+    {
+        endpoints.MapControllers();
+    });
+}
+```
 
 ## JWT
 O JWT (JSON Web Token) nada mais é que um padrão (RFC-7519) de mercado que define como transmitir e armazenar objetos JSON de forma simples, compacta e segura entre diferentes aplicações, muito utilizado para validar serviços em Web Services pois os dados contidos no token gerado pode ser validado a qualquer momento uma vez que ele é assinado digitalmente.
