@@ -19,7 +19,30 @@ https://localhost:5001/swagger
 
 O ASP.NET Core é framework cross-platform com código-fonte aberto para a criação de aplicativos modernos. Você pode ler os Fundamentos básicos do ASP.NET na documentação da Microsoft. O padrão de arquitetura MVC (Model-View-Controller) separa um aplicativo em três grupos principais de componentes: Model-View-Controller (MVC) . Esse padrão ajuda a alcançar o princípio de designer de separação de interesses.
 
-![GitHub Logo](/img/MVC.png)
+![MVC](/img/MVC.png)
+
+O `Model` em um aplicativo MVC representa o estado do aplicativo e qualquer lógica de negócios ou operações que devem ser executadas por ele.
+
+A `View` é responsável ​​por apresentar o conteúdo por meio da interface do usuário. Deve haver lógica mínima nas visualizações, e qualquer lógica nelas deve estar relacionada à apresentação de conteúdo.
+
+O `Controller` é responsável por receber todas as requisições do usuário. Seus métodos chamados actions são responsáveis por uma página, controlando qual model usar e qual view será mostrado ao usuário.
+
+`launchSettings.json` descreve como um projeto pode ser executado. Ele descreve o comando a ser executado, se o navegador deve ser aberto, quais variáveis ​​de ambiente devem ser definidas e assim por diante.
+
+![launchSettings.json](/img/launchSettings.png)
+
+O `appsettings.json` é usado para armazenar informações como cadeias de conexão ou configurações específicas do aplicativo e elas são armazenadas no formato JSON, como sugere a extensão do arquivo. (Se você estiver familiarizado com o ASP.NET MVC, poderá notar que a função desse arquivo é semelhante ao Web.config)
+
+![appsettings.json](/img/appsettings.png)
+
+`Program.cs` é o principal ponto de entrada para o aplicativo. Em seguida, ele vai para a classe Startup.cs para finalizar a configuração do aplicativo.
+
+![Program.cs](/img/Program.png)
+
+Startup.cs possui os Configure e ConfigureServices methods e é acionado pelo Program.cs
+
+![Startup.cs](/img/Startup.png)
+
 
 ### Swagger
 
