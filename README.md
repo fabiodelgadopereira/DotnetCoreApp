@@ -31,7 +31,7 @@ O `Controller` é responsável por receber todas as requisições do usuário. S
 
 ![launchSettings.json](/img/launchSettings.png)
 
-O `appsettings.json` é usado para armazenar informações como cadeias de conexão ou configurações específicas do aplicativo e elas são armazenadas no formato JSON, como sugere a extensão do arquivo. (Se você estiver familiarizado com o ASP.NET MVC, poderá notar que a função desse arquivo é semelhante ao Web.config)
+`appsettings.json` é usado para armazenar informações como cadeias de conexão ou configurações específicas do aplicativo e elas são armazenadas no formato JSON, como sugere a extensão do arquivo. (Se você estiver familiarizado com o ASP.NET MVC, poderá notar que a função desse arquivo é semelhante ao Web.config)
 
 ![appsettings.json](/img/appsettings.png)
 
@@ -39,10 +39,17 @@ O `appsettings.json` é usado para armazenar informações como cadeias de conex
 
 ![Program.cs](/img/Program.png)
 
-Startup.cs possui os Configure e ConfigureServices methods e é acionado pelo Program.cs
+`Startup.cs` possui os Configure e ConfigureServices methods e é acionado pelo Program.cs
 
 ![Startup.cs](/img/Startup.png)
 
+O método `ConfigureServices` é um local onde você pode registrar suas classes dependentes com o  built-in IoC container (o ASP.NET Core refere-se à class as a Service). Após registrar a classe dependente, ela pode ser usada em qualquer lugar do aplicativo. Você só precisa incluí-lo no parâmetro do construtor de uma classe em que deseja usá-lo. O IoC container o injetará automaticamente.
+
+O método `Configure` é usado para especificar como o aplicativo responde às solicitações HTTP. O pipeline de solicitação é configurado adicionando componentes de middleware a uma instância do `IApplicationBuilder`. O  `IApplicationBuilder` está disponível para o método `Configure`, mas não está registrado no contêiner de serviço. A hospedagem cria um `IApplicationBuilder` e o passa diretamente para o método `Configure`.
+
+A sequência de execução do aplicativo é a seguinte:
+
+![Fluxo](/img/fluxo.png)
 
 ### Swagger
 
