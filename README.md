@@ -5,14 +5,26 @@ Bem-vindo! Aqui ol
 ## Índice
 1. [Nome](#nome)
 2. [Projeto e Conteúdo](#conteudo)
-3. [Ícone](#icone)
-4. [#Suporte](#Suporte)
+3. [Swagger](#Swagger)
+4. [JSON Web Token (JWT)](#JSON Web Token (JWT))
+5. [SQL Server e ADO.NET](#SQL Server e ADO.NET)
+6. [Publicação](#Publicação)
+7. [#Suporte](#Suporte)
 
 ## Projeto e Conteúdo
 
-Implementação simples de API utilizando Swagger + JWT Authorization usando Bearer token
+Este diretório contém uma implementação orientará você na criação de um aplicativo de básico contendo autenticação, documentação e integração com banco de dados.
 
-https://localhost:5001/swagger
+### Como executar essa aplicação?
+Para executar essa aplicação, primeiro é necessário instalar o .NET Core. Depois disso, você deve seguir os passos abaixo:
+1. Clone ou faça o download deste repositório.
+2. Extraia o conteúdo se o download for um arquivo zip. Verifique se os arquivos estão com read-write.
+3. Execute o comando abaixo no prompt de comando.
+```shell
+dotnet run
+```
+4. A aplicação deverá estar disponivel em seu navegador no endereço: https://localhost:5001/swagger
+
 ![GitHub Logo](/img/CapturarTela.PNG)
 
 ### Entedento a estrutura de projeto de uma aplicação em ASP.NET Core MVC
@@ -51,7 +63,7 @@ A sequência de execução do aplicativo é a seguinte:
 
 ![Fluxo](/img/fluxo.png)
 
-### Swagger
+## Swagger
 
 O Swagger é uma aplicação open source que auxilia os desenvolvedores a definir, criar, documentar e consumir APIs REST;
 É composto de um arquivo de configuração, que pode ser definido em YAML ou JSON;
@@ -66,7 +78,7 @@ dotnet add package Swashbuckle.AspNetCore
 ```
 
 
-### JSON Web Token (JWT)
+## JSON Web Token (JWT)
 O JWT nada mais é que um padrão (RFC-7519) de mercado que define como transmitir e armazenar objetos JSON de forma simples, compacta e segura entre diferentes aplicações, muito utilizado para validar serviços em Web Services pois os dados contidos no token gerado pode ser validado a qualquer momento uma vez que ele é assinado digitalmente.
 
 JSON Web Tokens (JWT) é um padrão stateless porque o servidor autorizador não precisa manter nenhum estado; o próprio token é sulficiente para verificar a autorização de um portador de token.
@@ -80,7 +92,7 @@ fonte: https://jwt.io/introduction/
 ```shell
 dotnet add package System.IdentityModel.Tokens.Jwt
 ```
-### SQL Server e ADO.NET
+## SQL Server e ADO.NET
 
 O Entity Framework é uma ferramenta ORM da Microsoft madura e testada pelo mercado que pode ser usada para aplicações que usam o .NET Framework.
 
@@ -95,6 +107,12 @@ Stored Procedure, que traduzido significa Procedimento Armazenado, é uma conjun
 - sp_Clientes_GetAllValues
 - sp_Clientes_DeleteValue
 
+## Publicação
+
+Executáveis não são multiplataformas. São específicos para um sistema operacional e arquitetura de CPU. Ao publicar seu aplicativo e criar um executável, você pode publicar o aplicativo como independente ou dependente de tempo de execução. 
+Você pode criar um executável para `-r <RID> --self-contained false` uma plataforma dotnet publish específica passando os parâmetros para o comando. Quando `-r` o parâmetro é omitido, um executável é criado para sua plataforma atual. Todos os pacotes NuGet que tenham dependências específicas da plataforma para a plataforma-alvo são copiados para a pasta de publicação.
+
+dotnet publish -c Release -r win-x64 --self-contained true
 
 ## Supporte
 
