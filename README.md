@@ -96,10 +96,10 @@ public void ConfigureServices(IServiceCollection services)
     services.AddControllers();
 
     // Register the Swagger generator, defining 1 or more Swagger documents
->    services.AddSwaggerGen(c =>
->    {
->        c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
->    });
+    services.AddSwaggerGen(c =>
+    {
+        c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+    });
 }
 ```
 
@@ -109,14 +109,14 @@ public void ConfigureServices(IServiceCollection services)
 public void Configure(IApplicationBuilder app)
 {
     // Enable middleware to serve generated Swagger as a JSON endpoint.
->    app.UseSwagger();
+    app.UseSwagger();
 
     // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.),
     // specifying the Swagger JSON endpoint.
->    app.UseSwaggerUI(c =>
->   {
->        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
->    });
+    app.UseSwaggerUI(c =>
+   {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "My API V1");
+    });
 
     app.UseRouting();
     app.UseEndpoints(endpoints =>
@@ -140,6 +140,77 @@ fonte: https://jwt.io/introduction/
 ```shell
 dotnet add package System.IdentityModel.Tokens.Jwt
 ```
+
+#### Adicionando e configurando o JWT
+
+> Definir chave secreta no arquivo `appsettings.json`:
+
+```Json
+ },
+  "SecurityKey": "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+```
+> Implementar uma classe Controller para gestão das credenciais, nessa implementação é a  `TokenController.cs`.
+- Injetar intância de Configuration
+- Criar método Action POST RequestToken()
+ - Validar credenciais do usuário 
+ - Definir claims
+ - Definir chave 
+ - Definir credenciais 
+ - Gerar token (data expiração)
+
+ 
+> Adicione o gerador manipulador de autenticação `services.AddAuthentication` à coleção de serviços no método `Startup.ConfigureServices`. No método `Startup.Configure`, ative o middleware para requisitar a autenticação: 
+
+```C#
+        public void ConfigureServices (IServiceCollection services) {
+             services.AddScoped<ClienteRepository>();
+            //especifica o esquema usado para autenticacao do tipo Bearer
+            // e 
+            //define configurações como chave,algoritmo,validade, data expiracao...
+            services.AddAuthentication (JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer (options => {
+                    options.TokenValidationParameters = new TokenValidationParameters {
+                    ValidateIssuer = true,
+                    ValidateAudience = true,
+                    ValidateLifetime = true,
+                    ValidateIssuerSigningKey = true,
+                    ValidIssuer = "aplicacao",
+                    ValidAudience = "canal",
+                    IssuerSigningKey = new SymmetricSecurityKey (
+                    Encoding.UTF8.GetBytes (Configuration["SecurityKey"]))
+                    };
+
+                    options.Events = new JwtBearerEvents {
+                        OnAuthenticationFailed = context => {
+                                Console.WriteLine ("Token inválido..:. " + context.Exception.Message);
+                                return Task.CompletedTask;
+                            },
+                            OnTokenValidated = context => {
+                                Console.WriteLine ("Toekn válido...: " + context.SecurityToken);
+                                return Task.CompletedTask;
+                            }
+                    };
+                });
+
+            services.AddMvc ().SetCompatibilityVersion (CompatibilityVersion.Version_2_2);
+            
+        }
+
+        // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
+        public void Configure (IApplicationBuilder app, IHostingEnvironment env) {
+
+            if (env.IsDevelopment ()) {
+                app.UseDeveloperExceptionPage ();
+            } else {
+                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+                app.UseHsts ();
+            }
+
+            app.UseAuthentication ();
+            app.UseMvc ();
+        }
+```
+
 ## SQL Server e ADO.NET
 
 O Entity Framework é uma ferramenta ORM da Microsoft madura e testada pelo mercado que pode ser usada para aplicações que usam o .NET Framework.
@@ -154,6 +225,88 @@ Stored Procedure, que traduzido significa Procedimento Armazenado, é uma conjun
 - sp_Clientes_GetValueById
 - sp_Clientes_GetAllValues
 - sp_Clientes_DeleteValue
+
+#### Adicionando e configurando a conexão com o banco de dados.
+
+> Definir Connection string  no arquivo `appsettings.json`:
+
+```JSON
+{
+  "connectionStrings": {
+    "defaultConnection": "Data Source=NomeDoServidor;Initial Catalog=NomeDaBase;Integrated Security=False;User ID=Usuario;Password=xxxx;"
+  },
+```
+
+> Implemente uma classe Model que represente o modelo de dados da aplicação.
+
+```C#
+public class Cliente
+    {
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public string Cidade { get; set; }
+        public string Email { get; set; }
+        public string Sexo { get; set; }
+    }
+```
+
+> Implemente uma classe Controller com os metodos desejado para o acesso a dados. Toda a lógica de acesso ao banco de dados deve estar em uma classe `Data\Repository.cs`
+
+```C#
+ public class ClienteController : ControllerBase
+    {
+        private readonly ClienteRepository _repository;
+
+        public ClienteController(ClienteRepository repository)
+        {
+            this._repository = repository ?? throw new ArgumentNullException(nameof(repository));
+        }
+
+        // GET api/values
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<Cliente>>> Get()
+        {
+            return await _repository.GetAll();
+        }
+		...
+```
+
+```C#
+public class ClienteRepository
+    {
+        private readonly string _connectionString;
+
+        public ClienteRepository(IConfiguration configuration)
+        {
+            _connectionString = configuration.GetConnectionString("defaultConnection");
+        }
+
+        public async Task<List<Cliente>> GetAll()
+        {
+            using (SqlConnection sql = new SqlConnection(_connectionString))
+            {
+                using (SqlCommand cmd = new SqlCommand("sp_Clientes_GetAllValues", sql))
+                {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    var response = new List<Cliente>();
+                    await sql.OpenAsync();
+
+                    using (var reader = await cmd.ExecuteReaderAsync())
+                    {
+                        while (await reader.ReadAsync())
+                        {
+                            response.Add(MapToValue(reader));
+                        }
+                    }
+
+                    return response;
+                }
+            }
+        }
+		...
+```
+
+
 
 ## Publicação
 
