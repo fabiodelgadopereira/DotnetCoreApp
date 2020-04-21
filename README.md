@@ -3,17 +3,17 @@
 Bem-vindo! Aqui ol
 
 ## Índice
-1. [Nome](#nome)
-2. [Projeto e Conteúdo](#conteudo)
+1. [ApiCadastro](#ApiCadastro)
+2. [Projeto e Conteúdo](#Conteúdo)
 3. [Swagger](#Swagger)
-4. [JSON Web Token (JWT)](#JSON Web Token (JWT))
-5. [SQL Server e ADO.NET](#SQL Server e ADO.NET)
+4. [JWT](#JWT)
+5. [SQL Server e ADO.NET](#SQL Server)
 6. [Publicação](#Publicação)
-7. [#Suporte](#Suporte)
+7. [Suporte](#Suporte)
 
-## Projeto e Conteúdo
+## ApiCadastro
 
-Este diretório contém uma implementação orientará você na criação de um aplicativo de básico contendo autenticação, documentação e integração com banco de dados.
+Este repositório contém uma implementação que orientará você na criação de um aplicativo de básico contendo autenticação, documentação e integração com banco de dados.
 
 ### Como executar essa aplicação?
 Para executar essa aplicação, primeiro é necessário instalar o .NET Core. Depois disso, você deve seguir os passos abaixo:
@@ -26,6 +26,8 @@ dotnet run
 4. A aplicação deverá estar disponivel em seu navegador no endereço: https://localhost:5001/swagger
 
 ![GitHub Logo](/img/CapturarTela.PNG)
+
+## Projeto e Conteúdo
 
 ### Entedento a estrutura de projeto de uma aplicação em ASP.NET Core MVC
 
@@ -112,8 +114,10 @@ Stored Procedure, que traduzido significa Procedimento Armazenado, é uma conjun
 Executáveis não são multiplataformas. São específicos para um sistema operacional e arquitetura de CPU. Ao publicar seu aplicativo e criar um executável, você pode publicar o aplicativo como independente ou dependente de tempo de execução. 
 Você pode criar um executável para `-r <RID> --self-contained false` uma plataforma dotnet publish específica passando os parâmetros para o comando. Quando `-r` o parâmetro é omitido, um executável é criado para sua plataforma atual. Todos os pacotes NuGet que tenham dependências específicas da plataforma para a plataforma-alvo são copiados para a pasta de publicação.
 
+```shell
 dotnet publish -c Release -r win-x64 --self-contained true
+```
 
-## Supporte
+## Suporte
 
 Por favor entre em contato conosco via [Email]
