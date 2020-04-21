@@ -4,10 +4,10 @@ Bem-vindo! Aqui ol
 
 ## Índice
 1. [ApiCadastro](#ApiCadastro)
-2. [Projeto e Conteúdo](#Conteúdo)
+2. [Projeto e Conteúdo](#Projeto e Conteúdo)
 3. [Swagger](#Swagger)
 4. [JWT](#JWT)
-5. [SQL Server e ADO.NET](#SQL Server)
+5. [SQL Server e ADO.NET](#SQL Server e ADONET)
 6. [Publicação](#Publicação)
 7. [Suporte](#Suporte)
 
@@ -80,8 +80,8 @@ dotnet add package Swashbuckle.AspNetCore
 ```
 
 
-## JSON Web Token (JWT)
-O JWT nada mais é que um padrão (RFC-7519) de mercado que define como transmitir e armazenar objetos JSON de forma simples, compacta e segura entre diferentes aplicações, muito utilizado para validar serviços em Web Services pois os dados contidos no token gerado pode ser validado a qualquer momento uma vez que ele é assinado digitalmente.
+## JWT
+O JWT (JSON Web Token) nada mais é que um padrão (RFC-7519) de mercado que define como transmitir e armazenar objetos JSON de forma simples, compacta e segura entre diferentes aplicações, muito utilizado para validar serviços em Web Services pois os dados contidos no token gerado pode ser validado a qualquer momento uma vez que ele é assinado digitalmente.
 
 JSON Web Tokens (JWT) é um padrão stateless porque o servidor autorizador não precisa manter nenhum estado; o próprio token é sulficiente para verificar a autorização de um portador de token.
 
