@@ -27,6 +27,12 @@ dotnet run
 
 ![GitHub Logo](/CadastroApp.API/img/CapturarTela.PNG)
 
+### Extensões recomendadas para desenvolvimento no VSCODE
+
+- C# from Microsoft
+- C# Extensions from jchannon
+- NuGet Package Manager from jmrog
+
 ## Projeto e Conteúdo
 
 ### Entedento a estrutura de projeto de uma aplicação em ASP.NET Core MVC

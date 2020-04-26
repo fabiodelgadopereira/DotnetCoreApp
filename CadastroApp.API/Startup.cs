@@ -15,10 +15,14 @@ using Microsoft.Extensions.Options;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore;
-using cadastro.Models;
-using cadastro.Data;
+using CadastroApp.API.Models;
+using CadastroApp.API.Data;
+using System.Net;
+using Microsoft.AspNetCore.Diagnostics;
+using CadastroApp.API.Helpers;
+using Microsoft.AspNetCore.Http;
 
-namespace cadastro {
+namespace CadastroApp.API {
     public class Startup {
         public Startup (IConfiguration configuration) {
             Configuration = configuration;
@@ -87,14 +91,31 @@ namespace cadastro {
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure (IApplicationBuilder app, IHostingEnvironment env) {
 
-            if (env.IsDevelopment ()) {
-                app.UseDeveloperExceptionPage ();
-            } else {
-                // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
-                app.UseHsts ();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+            }
+            else
+            {
+                // Tratar exceções para evitar vazamento de informações
+                app.UseExceptionHandler(builder =>
+                {
+                    builder.Run(async context =>
+                    {
+                        context.Response.StatusCode = (int)HttpStatusCode.InternalServerError;
+
+                        var error = context.Features.Get<IExceptionHandlerFeature>();
+                        if (error != null)
+                        {
+                            context.Response.AddApplicationError(error.Error.Message);
+                            await context.Response.WriteAsync(error.Error.Message);
+                        }
+                    });
+                });
+                // app.UseHsts();
             }
 
-            app.UseHttpsRedirection ();
+           // app.UseHttpsRedirection ();
             app.UseAuthentication ();
             app.UseMvc ();
             app.UseSwagger ();

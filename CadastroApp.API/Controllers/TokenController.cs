@@ -2,13 +2,13 @@ using System;
 using System.IdentityModel.Tokens.Jwt;
 using System.Security.Claims;
 using System.Text;
-using cadastro.Models;
+using CadastroApp.API.Models;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.IdentityModel.Tokens;
 
-namespace cadastro.Controllers {
+namespace CadastroApp.API.Controllers {
     [Route ("api/[controller]")]
     public class TokenController : Controller {
         private readonly IConfiguration _configuration;
@@ -18,10 +18,10 @@ namespace cadastro.Controllers {
 
         [AllowAnonymous]
         [HttpPost]
-        public IActionResult RequestToken ([FromBody] Usuario request) {
-            if (request.Nome == "user" && request.Senha == "qwerty") {
+        public IActionResult RequestToken ([FromBody] Credential request) {
+            if (request.tenantId == _configuration["Credentials:tenantId"] && request.clientId == _configuration["Credentials:clientId"] && request.secretId == _configuration["Credentials:secretId"]) {
                 var claims = new [] {
-                new Claim (ClaimTypes.Name, request.Nome)
+                new Claim (ClaimTypes.Name, request.clientId)
                 };
 
                 //recebe uma instancia da classe SymmetricSecurityKey 

@@ -2,13 +2,13 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using cadastro.Data;
-using cadastro.Models;
+using CadastroApp.API.Data;
+using CadastroApp.API.Models;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 
-namespace cadastro.Controllers
+namespace CadastroApp.API.Controllers
 {
     [Route("api/[controller]")]
     [Authorize()]
