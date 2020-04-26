@@ -25,7 +25,7 @@ dotnet run
 ```
 4. A aplicação deverá estar disponivel em seu navegador no endereço: https://localhost:5001/swagger
 
-![GitHub Logo](/img/CapturarTela.PNG)
+![GitHub Logo](/CadastroApp.API/img/CapturarTela.PNG)
 
 ## Projeto e Conteúdo
 
@@ -33,7 +33,7 @@ dotnet run
 
 O ASP.NET Core é framework cross-platform com código-fonte aberto para a criação de aplicativos modernos. Você pode ler os Fundamentos básicos do ASP.NET na documentação da Microsoft. O padrão de arquitetura MVC (Model-View-Controller) separa um aplicativo em três grupos principais de componentes: Model-View-Controller (MVC) . Esse padrão ajuda a alcançar o princípio de designer de separação de interesses.
 
-![MVC](/img/MVC.png)
+![MVC](/CadastroApp.API/img/MVC.png)
 
 O `Model` em um aplicativo MVC representa o estado do aplicativo e qualquer lógica de negócios ou operações que devem ser executadas por ele.
 
@@ -43,19 +43,19 @@ O `Controller` é responsável por receber todas as requisições do usuário. S
 
 `launchSettings.json` descreve como um projeto pode ser executado. Ele descreve o comando a ser executado, se o navegador deve ser aberto, quais variáveis ​​de ambiente devem ser definidas e assim por diante.
 
-![launchSettings.json](/img/launchSettings.png)
+![launchSettings.json](/CadastroApp.API/img/launchSettings.png)
 
 `appsettings.json` é usado para armazenar informações como cadeias de conexão ou configurações específicas do aplicativo e elas são armazenadas no formato JSON, como sugere a extensão do arquivo. (Se você estiver familiarizado com o ASP.NET MVC, poderá notar que a função desse arquivo é semelhante ao Web.config)
 
-![appsettings.json](/img/appsettings.png)
+![appsettings.json](/CadastroApp.API/img/appsettings.png)
 
 `Program.cs` é o principal ponto de entrada para o aplicativo. Em seguida, ele vai para a classe Startup.cs para finalizar a configuração do aplicativo.
 
-![Program.cs](/img/Program.png)
+![Program.cs](/CadastroApp.API/img/Program.png)
 
 `Startup.cs` possui os Configure e ConfigureServices methods e é acionado pelo Program.cs
 
-![Startup.cs](/img/Startup.png)
+![Startup.cs](/CadastroApp.API/img/Startup.png)
 
 O método `ConfigureServices` é um local onde você pode registrar suas classes dependentes com o  built-in IoC container (o ASP.NET Core refere-se à class as a Service). Após registrar a classe dependente, ela pode ser usada em qualquer lugar do aplicativo. Você só precisa incluí-lo no parâmetro do construtor de uma classe em que deseja usá-lo. O IoC container o injetará automaticamente.
 
@@ -63,7 +63,7 @@ O método `Configure` é usado para especificar como o aplicativo responde às s
 
 A sequência de execução do aplicativo é a seguinte:
 
-![Fluxo](/img/fluxo.png)
+![Fluxo](/CadastroApp.API/img/fluxo.png)
 
 ## Swagger
 

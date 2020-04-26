@@ -3,15 +3,16 @@
 Olá! Seja bem vindo ;)
 
 ## Índice
-ApiCadastro.API
-ApiCadastro-SPA
+1. [CadastroApp-SPA](#CadastroAppSPA)
+2. [CadastroApp.API](#CadastroAppAPI)
 
-## ApiCadastro.API
 
+## CadastroApp-SPA
+Este repositório contém uma implementação do front web que consome a API criada no repositório CadastroApp.API. Foi utilizado Angular e algumas bibiotecas javascript para aprimorar a experienncia do usuário.
+
+
+## CadastroApp.API
 Este repositório contém uma implementação que orientará você na criação de um aplicativo de básico contendo autenticação, documentação e integração com banco de dados.
-
-## ApiCadastro.API
-ApiCadastro-SPA
 
 ## Suporte
 
