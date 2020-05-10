@@ -57,7 +57,7 @@ namespace CadastroApp.API.Controllers {
             };
             if (result == true) {
                 return Ok (new {
-                    token = GenerateJwtToken (userToCreate)
+                    token = GenerateJwtToken (userToCreate).Result
                 });
             }
 

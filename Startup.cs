@@ -35,6 +35,7 @@ namespace CadastroApp.API {
         public void ConfigureServices (IServiceCollection services) {
              services.AddScoped<ClienteRepository>();
              services.AddScoped<AuthRepository>();
+             services.AddCors();
             //especifica o esquema usado para autenticacao do tipo Bearer
             // e 
             //define configurações como chave,algoritmo,validade, data expiracao...
@@ -117,6 +118,7 @@ namespace CadastroApp.API {
             }
 
            // app.UseHttpsRedirection ();
+           app.UseCors(x => x.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod());
             app.UseAuthentication ();
             app.UseMvc ();
             app.UseSwagger ();
