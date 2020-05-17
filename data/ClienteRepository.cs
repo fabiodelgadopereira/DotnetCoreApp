@@ -1,4 +1,5 @@
 using CadastroApp.API.Models;
+using CadastroApp.API.Helpers;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -18,13 +19,20 @@ namespace CadastroApp.API.Data
             _connectionString = configuration.GetConnectionString("defaultConnection");
         }
 
-        public async Task<List<Cliente>> GetAll()
+        public async Task<List<Cliente>> GetAll(ClienteParams param)
         {
+            int PageIndex = param.PageNumber;
+            int PageSize = param.PageSize;
+
+
             using (SqlConnection sql = new SqlConnection(_connectionString))
             {
-                using (SqlCommand cmd = new SqlCommand("sp_Clientes_GetAllValues", sql))
+                using (SqlCommand cmd = new SqlCommand("sp_GetClientesPageWise", sql))
                 {
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add(new SqlParameter("@PageIndex", PageIndex));
+                    cmd.Parameters.Add(new SqlParameter("@PageSize", PageSize));
+                    cmd.Parameters.Add(new SqlParameter("@RecordCount", 10));
                     var response = new List<Cliente>();
                     await sql.OpenAsync();
 

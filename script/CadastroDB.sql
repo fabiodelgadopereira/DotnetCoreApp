@@ -101,9 +101,9 @@ SET QUOTED_IDENTIFIER ON
 GO
 CREATE TABLE [dbo].[Clientes](
 	[Id] [int] IDENTITY(1,1) NOT NULL,
-	[Nome] [nvarchar](80) NOT NULL,
+	[Nome] [nvarchar](200) NOT NULL,
 	[Cidade] [nvarchar](50) NOT NULL,
-	[Email] [nvarchar](80) NULL,
+	[Email] [nvarchar](200) NULL,
 	[Sexo] [nvarchar](10) NOT NULL
  CONSTRAINT [PK_Clientes] PRIMARY KEY CLUSTERED 
 (
@@ -217,6 +217,44 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
+CREATE PROCEDURE sp_GetClientesPageWise
+      @PageIndex INT = 1
+      ,@PageSize INT = 10
+      ,@RecordCount INT OUTPUT
+AS
+BEGIN
+      SET NOCOUNT ON;
+      SELECT ROW_NUMBER() OVER
+      (
+            ORDER BY [Id] ASC
+      )AS RowNumber
+      ,[Id]
+      ,[Nome]
+      ,[Cidade]
+	  ,[Email]
+	  ,[Sexo]
+     INTO #Results
+      FROM Clientes
+     
+      SELECT @RecordCount = COUNT(*)
+      FROM #Results
+           
+      SELECT * FROM #Results
+      WHERE RowNumber BETWEEN(@PageIndex -1) * @PageSize + 1 AND(((@PageIndex -1) * @PageSize + 1) + @PageSize) - 1
+     
+      DROP TABLE #Results
+END
+GO
+/****** Object:  StoredProcedure [dbo].[InsertValue]    Script Date: 05-May-19 7:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
 
 GO
 USE [master]
@@ -230,5 +268,6 @@ GRANT execute ON [CadastroDB].dbo.sp_Clientes_InsertValue TO delgado
 GRANT execute ON [CadastroDB].dbo.sp_Clientes_GetValueById TO delgado
 GRANT execute ON [CadastroDB].dbo.sp_Clientes_GetAllValues TO delgado
 GRANT execute ON [CadastroDB].dbo.sp_Clientes_DeleteValue TO delgado
+GRANT execute ON [CadastroDB].dbo.sp_GetClientesPageWise TO delgado
 ALTER DATABASE [CadastroDB] SET  READ_WRITE 
 GO

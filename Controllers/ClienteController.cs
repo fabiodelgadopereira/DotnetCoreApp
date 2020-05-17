@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using CadastroApp.API.Models;
 using CadastroApp.API.Data;
+using CadastroApp.API.Helpers;
 
 namespace cadastro.Controllers
 {
@@ -24,9 +25,9 @@ namespace cadastro.Controllers
 
         // GET api/values
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Cliente>>> Get()
-        {
-            return await _repository.GetAll();
+        public async Task<ActionResult<IEnumerable<Cliente>>> Get([FromQuery] ClienteParams param)
+        {   
+            return await _repository.GetAll(param);
         }
 
         // GET api/values/5
