@@ -8,8 +8,9 @@ Olá! Seja bem vindo ;)
 3. [Swagger](#Swagger)
 4. [JWT](#JWT)
 5. [SQL Server e ADO.NET](#SQL-Server-e-ADONET)
-6. [Publicação](#Publicação)
-7. [Suporte](#Suporte)
+6. [Server-Side Paging](#Server-Side-Paging)
+7. [Publicação](#Publicação)
+8. [Suporte](#Suporte)
 
 ## ApiCadastro
 
@@ -311,7 +312,7 @@ public class ClienteRepository
         }
 		...
 ```
-#### Server-Side Paging
+## Server-Side Paging
 
 Em muitos casos - por exemplo, ao trabalhar com conjuntos de dados muito grandes - não buscamos na base de dados toda a coleção completa e armazenamos na memória. Nesse caso é usar algum tipo de paginação no servidor, onde o servidor envia apenas uma única página de cada vez. Esse é um objeto json de resposta do servidor para casos como esses:
 
