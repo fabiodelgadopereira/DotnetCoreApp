@@ -41,7 +41,7 @@ namespace CadastroApp.API.Data
                         while (await reader.ReadAsync())
                         {       
                           passwordHash= (byte[])reader["PasswordHash"];
-                          passwordSalt= (byte[])reader["PasswordSait"];
+                          passwordSalt= (byte[])reader["PasswordSalt"];
                             return VerifyPasswordHash(password,  passwordHash,  passwordSalt);
                         }
                     }
@@ -77,7 +77,7 @@ namespace CadastroApp.API.Data
                     cmd.CommandType = System.Data.CommandType.StoredProcedure;
                     cmd.Parameters.Add(new SqlParameter("@Username ", cred.Username));
                     cmd.Parameters.Add(new SqlParameter("@PasswordHash", passwordHash));
-                    cmd.Parameters.Add(new SqlParameter("@PasswordSait", passwordSalt));
+                    cmd.Parameters.Add(new SqlParameter("@PasswordSalt", passwordSalt));
                     await sql.OpenAsync();
                     await cmd.ExecuteNonQueryAsync();
                     return cred;
