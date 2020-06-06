@@ -217,6 +217,37 @@ GO
 -- Create date: <Create Date,,>
 -- Description:	<Description,,>
 -- =============================================
+CREATE PROCEDURE [dbo].[sp_Clientes_UpdateValue] 
+	-- Add the parameters for the stored procedure here
+	@Id int,
+	@Nome nvarchar(80),
+	@Cidade nvarchar(50),
+	@Email nvarchar(80),
+	@Sexo nvarchar(10)
+AS
+BEGIN
+	-- SET NOCOUNT ON added to prevent extra result sets from
+	-- interfering with SELECT statements.
+	SET NOCOUNT ON;
+
+	UPDATE [dbo].[Clientes] 
+	SET [Nome] = @Nome
+       ,[Cidade] = @Cidade
+       ,[Email] = @Email
+       ,[Sexo] = @Sexo
+	WHERE [Id] = @Id
+END
+GO
+/****** Object:  StoredProcedure [dbo].[UpdateValue]    Script Date: 05-May-19 7:19:31 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+-- =============================================
+-- Author:		<Author,,Name>
+-- Create date: <Create Date,,>
+-- Description:	<Description,,>
+-- =============================================
 CREATE PROCEDURE sp_GetClientesPageWise
       @PageIndex INT = 1
       ,@PageSize INT = 10
@@ -269,5 +300,6 @@ GRANT execute ON [CadastroDB].dbo.sp_Clientes_GetValueById TO delgado
 GRANT execute ON [CadastroDB].dbo.sp_Clientes_GetAllValues TO delgado
 GRANT execute ON [CadastroDB].dbo.sp_Clientes_DeleteValue TO delgado
 GRANT execute ON [CadastroDB].dbo.sp_GetClientesPageWise TO delgado
+GRANT execute ON [CadastroDB].dbo.sp_Clientes_UpdateValue TO delgado
 ALTER DATABASE [CadastroDB] SET  READ_WRITE 
 GO

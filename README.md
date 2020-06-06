@@ -232,6 +232,8 @@ Stored Procedure, que traduzido significa Procedimento Armazenado, é uma conjun
 - sp_Clientes_GetValueById
 - sp_Clientes_GetAllValues
 - sp_Clientes_DeleteValue
+- sp_Clientes_UpdateValue
+- sp_GetClientesPageWise
 
 #### Adicionando e configurando a conexão com o banco de dados.
 

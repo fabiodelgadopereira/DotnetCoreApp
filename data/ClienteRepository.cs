@@ -93,6 +93,21 @@ namespace CadastroApp.API.Data {
                 }
             }
         }
+                public async Task Update (Cliente value) {
+            using (SqlConnection sql = new SqlConnection (_connectionString)) {
+                using (SqlCommand cmd = new SqlCommand ("sp_Clientes_UpdateValue", sql)) {
+                    cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                    cmd.Parameters.Add (new SqlParameter ("@Id", value.Id));
+                    cmd.Parameters.Add (new SqlParameter ("@Nome", value.Nome));
+                    cmd.Parameters.Add (new SqlParameter ("@Cidade", value.Cidade));
+                    cmd.Parameters.Add (new SqlParameter ("@Email", value.Email));
+                    cmd.Parameters.Add (new SqlParameter ("@Sexo", value.Sexo));
+                    await sql.OpenAsync ();
+                    await cmd.ExecuteNonQueryAsync ();
+                    return;
+                }
+            }
+        }
 
         public async Task DeleteById (int Id) {
             using (SqlConnection sql = new SqlConnection (_connectionString)) {

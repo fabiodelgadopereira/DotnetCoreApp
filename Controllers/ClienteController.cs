@@ -46,8 +46,10 @@ namespace cadastro.Controllers {
         }
 
         // PUT api/values/5
-        [HttpPut ("{id}")]
-        public void Put (int id, [FromBody] string value) { }
+        [HttpPut]
+        public async Task  Put ( [FromBody] Cliente value) {
+            await _repository.Update(value); 
+         }
 
         // DELETE api/values/5
         [HttpDelete ("{id}")]
