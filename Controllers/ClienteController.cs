@@ -26,15 +26,9 @@ namespace cadastro.Controllers {
         // GET api/values
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Object>>> Get ([FromQuery] ClienteParams param) {
-            try {
 
              return  await _repository.GetAll (param);
-               
-            } catch (Exception ex) {
-                throw ex;
-
-            }
-
+  
         }
 
         // GET api/values/5
