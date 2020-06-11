@@ -9,8 +9,9 @@ Olá! Seja bem vindo ;)
 4. [JWT](#JWT)
 5. [SQL Server e ADO.NET](#SQL-Server-e-ADONET)
 6. [Server-Side Paging](#Server-Side-Paging)
-7. [Publicação](#Publicação)
-8. [Suporte](#Suporte)
+7. [SMTP](#SMTP)
+8. [Publicação](#Publicação)
+9. [Suporte](#Suporte)
 
 ## ApiCadastro
 
@@ -319,6 +320,49 @@ public class ClienteRepository
 Em muitos casos - por exemplo, ao trabalhar com conjuntos de dados muito grandes - não buscamos na base de dados toda a coleção completa e armazenamos na memória. Nesse caso é usar algum tipo de paginação no servidor, onde o servidor envia apenas uma única página de cada vez. Esse é um objeto json de resposta do servidor para casos como esses:
 
 ![paginacao](/img/paginacao2.PNG)
+
+## STMP
+
+O SMTP ou Simple Mail Transfer Protocol, é uma convenção padrão dedicada ao envio de e-mail. A princípio o protocolo SMTP utilizava por padrão a porta 25 ou 465 (conexão criptografada) para conexão, porém a partir de 2013 os provedores de internet e as operadoras do Brasil passaram a bloquear a porta 25, e começaram a usar a porta 587 para diminuir a quantidade de SPAM. O SMTP é um protocolo que faz apenas o envio de e-mails, isso significa que o usuário não tem permissão para baixar as mensagens do servidor, nesse caso é necessário utilizar um Client de e-mail que suporte os protocolos POP3 ou IMAP como o Outlook, Thunderbird e etc. Para negócios ou empresas pequenas com baixo volume de e-mails, o servidor SMTP gratuito do Google pode ser uma ótima solução e você pode usar o Gmail para enviar o seu e-mail. Eles possuem uma infraestrutura gigante e você pode confiar nos serviços deles para ficar online. Porém, mesmo sendo completamente grátis, tudo tem um limite. De acordo com a documentação do Google, você pode enviar até 100 e-mails a cada período de 24 horas quando envia através do servidor SMTP deles.  Ou você também pode pensar nisso como sendo 3 mil e-mails por mês gratuitamente.Dependendo de quantos e-mails você envia ou do tamanho do seu negócio, isto pode ser mais do que suficiente. Se você envia mais de 5 mil e-mails por mês, você vai preferir usar um serviço de e-mail transacional de terceiros ou um serviço premium. Abaixo temos uma implementação de envio de e-mail via SMTP, a classe `Contato` possui os atributos de email do destinatário, nome (que será enviado no assunto) e corpo do e-mail. 
+
+```C#
+        private readonly IConfiguration _smtpConfig;
+
+        public ContatoController (IConfiguration configuration) {
+
+            _smtpConfig = configuration;
+        }
+
+        [HttpPost]
+        public async Task Post ([FromBody] Contato value) {
+
+            try {
+                string toEmail = value.Email;
+
+                MailMessage mail = new MailMessage () {
+                    From = new MailAddress (_smtpConfig["EmailSettings:UsernameEmail"])
+                };
+
+                mail.To.Add (new MailAddress (toEmail));
+                mail.Subject = "[Contato] - " + value.Nome;
+                mail.Body = value.Mensagem;
+                mail.IsBodyHtml = true;
+                mail.Priority = MailPriority.High;
+
+                //para anexos
+                //mail.Attachments.Add(new Attachment(arquivo));
+                //
+
+                using (SmtpClient smtp = new SmtpClient (_smtpConfig["EmailSettings:PrimaryDomain"],  Int32.Parse(_smtpConfig["EmailSettings:PrimaryPort"]))) {
+                    smtp.Credentials = new NetworkCredential (_smtpConfig["EmailSettings:UsernameEmail"],_smtpConfig["EmailSettings:UsernamePassword"]);
+                    smtp.EnableSsl = true;
+                    await smtp.SendMailAsync (mail);
+                }
+            } catch (Exception ex) {
+                throw ex;
+            }
+        }
+```
 
 ## Publicação
 

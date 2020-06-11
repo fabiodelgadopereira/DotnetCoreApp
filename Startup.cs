@@ -36,6 +36,7 @@ namespace CadastroApp.API {
              services.AddScoped<ClienteRepository>();
              services.AddScoped<AuthRepository>();
              services.AddCors();
+             
             //especifica o esquema usado para autenticacao do tipo Bearer
             // e 
             //define configurações como chave,algoritmo,validade, data expiracao...
