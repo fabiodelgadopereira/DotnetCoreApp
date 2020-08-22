@@ -10,8 +10,9 @@ Olá! Seja bem vindo ;)
 5. [SQL Server e ADO.NET](#SQL-Server-e-ADONET)
 6. [Server-Side Paging](#Server-Side-Paging)
 7. [SMTP](#SMTP)
-8. [Publicação](#Publicação)
-9. [Suporte](#Suporte)
+8. [Testes unitários (xUnit)](#Testes-unitários-Xunit)
+9. [Publicação](#Publicação)
+10. [Suporte](#Suporte)
 
 ## ApiCadastro
 
@@ -34,6 +35,7 @@ dotnet run
 - C# from Microsoft
 - C# Extensions from jchannon
 - NuGet Package Manager from jmrog
+- .NET Core Test Explorer from Jun Han
 
 ## Projeto e Conteúdo
 
@@ -321,7 +323,7 @@ Em muitos casos - por exemplo, ao trabalhar com conjuntos de dados muito grandes
 
 ![paginacao](/img/paginacao2.PNG)
 
-## STMP
+## SMTP
 
 O SMTP ou Simple Mail Transfer Protocol, é uma convenção padrão dedicada ao envio de e-mail. A princípio o protocolo SMTP utilizava por padrão a porta 25 ou 465 (conexão criptografada) para conexão, porém a partir de 2013 os provedores de internet e as operadoras do Brasil passaram a bloquear a porta 25, e começaram a usar a porta 587 para diminuir a quantidade de SPAM. O SMTP é um protocolo que faz apenas o envio de e-mails, isso significa que o usuário não tem permissão para baixar as mensagens do servidor, nesse caso é necessário utilizar um Client de e-mail que suporte os protocolos POP3 ou IMAP como o Outlook, Thunderbird e etc. Para negócios ou empresas pequenas com baixo volume de e-mails, o servidor SMTP gratuito do Google pode ser uma ótima solução e você pode usar o Gmail para enviar o seu e-mail. Eles possuem uma infraestrutura gigante e você pode confiar nos serviços deles para ficar online. Porém, mesmo sendo completamente grátis, tudo tem um limite. De acordo com a documentação do Google, você pode enviar até 100 e-mails a cada período de 24 horas quando envia através do servidor SMTP deles.  Ou você também pode pensar nisso como sendo 3 mil e-mails por mês gratuitamente.Dependendo de quantos e-mails você envia ou do tamanho do seu negócio, isto pode ser mais do que suficiente. Se você envia mais de 5 mil e-mails por mês, você vai preferir usar um serviço de e-mail transacional de terceiros ou um serviço premium. Abaixo temos uma implementação de envio de e-mail via SMTP, a classe `Contato` possui os atributos de email do destinatário, nome (que será enviado no assunto) e corpo do e-mail. 
 
@@ -362,6 +364,49 @@ O SMTP ou Simple Mail Transfer Protocol, é uma convenção padrão dedicada ao 
                 throw ex;
             }
         }
+```
+## Testes unitários (xUnit)
+
+Teste de unidade é toda a aplicação de teste nas assinaturas de entrada e saída de um sistema. Consiste em validar dados válidos e inválidos via I/O (entrada/saída) sendo aplicado por desenvolvedores ou analistas de teste. Uma unidade é a menor parte testável de um programa de computador. Em programação procedural, uma unidade pode ser uma função individual ou um procedimento. Idealmente, cada teste de unidade é independente dos demais, o que possibilita ao programador testar cada módulo isoladamente.
+O xUnit é uma ferramenta de teste de unidade focada na comunidade, gratuita e de código aberto para o .NET Framework. Escrito pelo inventor original do NUnit v2, xUnit.net é a mais recente tecnologia para testes de unidade C #, F #, VB.NET e outras linguagens .NET. xUnit.net funciona com ReSharper, CodeRush, TestDriven.NET e Xamarin. Faz parte da .NET Foundation e opera de acordo com seu código de conduta. Ele está licenciado sob Apache 2 (uma licença aprovada pela OSI).
+
+> Utilize o comando abaixo para instalar o componente, e gerar a pasta de testes:
+```shell
+dotnet add package Xunit
+dotnet new xunit -o DotnetCoreApp.Tests
+```
+
+> exemplo de classe de teste
+```C#
+using System;
+using Xunit;
+
+namespace DotnetCoreApp.test
+{
+    public class UnitTest1
+    {
+        [Fact]
+        public void PassingTest()
+        {
+            Assert.Equal(4, Add(2, 2));
+        }
+
+        [Fact]
+        public void FailingTest()
+        {
+            Assert.Equal(5, Add(2, 2));
+        }
+
+        int Add(int x, int y)
+        {
+            return x + y;
+        }
+    }
+}
+```
+> Para executar utilize o comando abaixo na pasta
+```shell
+dotnet test
 ```
 
 ## Publicação
