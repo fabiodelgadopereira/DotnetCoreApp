@@ -1,0 +1,1109 @@
+{
+  "cadastro.dll": {
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Models\\Contato.cs": {
+      "experimento_swagger.Models.Contato": {
+        "System.String experimento_swagger.Models.Contato::get_Nome()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String experimento_swagger.Models.Contato::get_Email()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String experimento_swagger.Models.Contato::get_Mensagem()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Models\\EmailSettings.cs": {
+      "experimento_swagger.Models.EmailSettings": {
+        "System.String experimento_swagger.Models.EmailSettings::get_PrimaryDomain()": {
+          "Lines": {
+            "4": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 experimento_swagger.Models.EmailSettings::get_PrimaryPort()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String experimento_swagger.Models.EmailSettings::get_UsernameEmail()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String experimento_swagger.Models.EmailSettings::get_UsernamePassword()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String experimento_swagger.Models.EmailSettings::get_FromEmail()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        },
+        "System.String experimento_swagger.Models.EmailSettings::get_ToEmail()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String experimento_swagger.Models.EmailSettings::get_CcEmail()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Controllers\\ClienteController.cs": {
+      "cadastro.Controllers.ClienteController": {
+        "System.Void cadastro.Controllers.ClienteController::.ctor(CadastroApp.API.Data.ClienteRepository)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": [
+            {
+              "Line": 22,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 22,
+              "Offset": 11,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "cadastro.Controllers.ClienteController/<Get>d__2": {
+        "System.Void cadastro.Controllers.ClienteController/<Get>d__2::MoveNext()": {
+          "Lines": {
+            "28": 0,
+            "30": 0,
+            "32": 0
+          },
+          "Branches": []
+        }
+      },
+      "cadastro.Controllers.ClienteController/<Get>d__3": {
+        "System.Void cadastro.Controllers.ClienteController/<Get>d__3::MoveNext()": {
+          "Lines": {
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0
+          },
+          "Branches": [
+            {
+              "Line": 38,
+              "Offset": 164,
+              "EndOffset": 166,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 38,
+              "Offset": 164,
+              "EndOffset": 186,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "cadastro.Controllers.ClienteController/<Post>d__4": {
+        "System.Void cadastro.Controllers.ClienteController/<Post>d__4::MoveNext()": {
+          "Lines": {
+            "44": 0,
+            "45": 0,
+            "46": 0
+          },
+          "Branches": []
+        }
+      },
+      "cadastro.Controllers.ClienteController/<Put>d__5": {
+        "System.Void cadastro.Controllers.ClienteController/<Put>d__5::MoveNext()": {
+          "Lines": {
+            "50": 0,
+            "51": 0,
+            "52": 0
+          },
+          "Branches": []
+        }
+      },
+      "cadastro.Controllers.ClienteController/<Delete>d__6": {
+        "System.Void cadastro.Controllers.ClienteController/<Delete>d__6::MoveNext()": {
+          "Lines": {
+            "56": 0,
+            "57": 0,
+            "58": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Controllers\\ContatoController.cs": {
+      "cadastro.Controllers.ContatoController": {
+        "System.Void cadastro.Controllers.ContatoController::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "18": 0,
+            "20": 0,
+            "21": 0
+          },
+          "Branches": []
+        }
+      },
+      "cadastro.Controllers.ContatoController/<Post>d__2": {
+        "System.Void cadastro.Controllers.ContatoController/<Post>d__2::MoveNext()": {
+          "Lines": {
+            "24": 0,
+            "26": 0,
+            "27": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "51": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Controllers\\FileUploadController.cs": {
+      "cadastro.Controllers.FileUploadController": {
+        "System.Void cadastro.Controllers.FileUploadController::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0
+          },
+          "Branches": []
+        }
+      },
+      "cadastro.Controllers.FileUploadController/<Post>d__2": {
+        "System.Void cadastro.Controllers.FileUploadController/<Post>d__2::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "49": 0
+          },
+          "Branches": [
+            {
+              "Line": 29,
+              "Offset": 508,
+              "EndOffset": 73,
+              "Path": 1,
+              "Ordinal": 5,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 184,
+              "EndOffset": 186,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 33,
+              "Offset": 184,
+              "EndOffset": 200,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 217,
+              "EndOffset": 222,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            },
+            {
+              "Line": 36,
+              "Offset": 217,
+              "EndOffset": 468,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 29,
+              "Offset": 508,
+              "EndOffset": 513,
+              "Path": 0,
+              "Ordinal": 4,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Program.cs": {
+      "CadastroApp.API.Program": {
+        "System.Void CadastroApp.API.Program::Main(System.String[])": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        },
+        "Microsoft.AspNetCore.Hosting.IWebHostBuilder CadastroApp.API.Program::CreateWebHostBuilder(System.String[])": {
+          "Lines": {
+            "21": 0,
+            "22": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Startup.cs": {
+      "CadastroApp.API.Startup": {
+        "Microsoft.Extensions.Configuration.IConfiguration CadastroApp.API.Startup::get_Configuration()": {
+          "Lines": {
+            "32": 0
+          },
+          "Branches": []
+        },
+        "System.Void CadastroApp.API.Startup::ConfigureServices(Microsoft.Extensions.DependencyInjection.IServiceCollection)": {
+          "Lines": {
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "49": 0,
+            "50": 0,
+            "51": 0,
+            "52": 0,
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "67": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0
+          },
+          "Branches": [
+            {
+              "Line": 61,
+              "Offset": 13,
+              "EndOffset": 15,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 61,
+              "Offset": 13,
+              "EndOffset": 19,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CadastroApp.API.Startup::Configure(Microsoft.AspNetCore.Builder.IApplicationBuilder,Microsoft.AspNetCore.Hosting.IHostingEnvironment)": {
+          "Lines": {
+            "95": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "102": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "119": 0,
+            "122": 0,
+            "123": 0,
+            "124": 0,
+            "125": 0,
+            "127": 0,
+            "128": 0,
+            "129": 0,
+            "131": 0
+          },
+          "Branches": [
+            {
+              "Line": 97,
+              "Offset": 9,
+              "EndOffset": 11,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 97,
+              "Offset": 9,
+              "EndOffset": 22,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CadastroApp.API.Startup::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "28": 0,
+            "29": 0,
+            "30": 0
+          },
+          "Branches": []
+        }
+      },
+      "CadastroApp.API.Startup/<>c/<<Configure>b__5_3>d": {
+        "System.Void CadastroApp.API.Startup/<>c/<<Configure>b__5_3>d::MoveNext()": {
+          "Lines": {},
+          "Branches": [
+            {
+              "Line": 111,
+              "Offset": 73,
+              "EndOffset": 78,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 111,
+              "Offset": 73,
+              "EndOffset": 242,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Models\\Cliente.cs": {
+      "CadastroApp.API.Models.Cliente": {
+        "System.Int32 CadastroApp.API.Models.Cliente::get_Id()": {
+          "Lines": {
+            "12": 0
+          },
+          "Branches": []
+        },
+        "System.String CadastroApp.API.Models.Cliente::get_Nome()": {
+          "Lines": {
+            "15": 0
+          },
+          "Branches": []
+        },
+        "System.String CadastroApp.API.Models.Cliente::get_Cidade()": {
+          "Lines": {
+            "18": 0
+          },
+          "Branches": []
+        },
+        "System.String CadastroApp.API.Models.Cliente::get_Email()": {
+          "Lines": {
+            "22": 2
+          },
+          "Branches": []
+        },
+        "System.String CadastroApp.API.Models.Cliente::get_Sexo()": {
+          "Lines": {
+            "25": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Models\\Credential.cs": {
+      "CadastroApp.API.Models.Credential": {
+        "System.Int32 CadastroApp.API.Models.Credential::get_Id()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.String CadastroApp.API.Models.Credential::get_Username()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        },
+        "System.String CadastroApp.API.Models.Credential::get_Password()": {
+          "Lines": {
+            "8": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Helpers\\ClienteParams.cs": {
+      "CadastroApp.API.Helpers.ClienteParams": {
+        "System.Int32 CadastroApp.API.Helpers.ClienteParams::get_PageIndex()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        },
+        "System.Int32 CadastroApp.API.Helpers.ClienteParams::get_PageSize()": {
+          "Lines": {
+            "10": 0
+          },
+          "Branches": []
+        },
+        "System.Void CadastroApp.API.Helpers.ClienteParams::set_PageSize(System.Int32)": {
+          "Lines": {
+            "11": 0
+          },
+          "Branches": [
+            {
+              "Line": 11,
+              "Offset": 5,
+              "EndOffset": 7,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 11,
+              "Offset": 5,
+              "EndOffset": 10,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CadastroApp.API.Helpers.ClienteParams::.ctor()": {
+          "Lines": {
+            "7": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Helpers\\Extensions.cs": {
+      "CadastroApp.API.Helpers.Extensions": {
+        "System.Void CadastroApp.API.Helpers.Extensions::AddApplicationError(Microsoft.AspNetCore.Http.HttpResponse,System.String)": {
+          "Lines": {
+            "10": 0,
+            "11": 0,
+            "12": 0,
+            "13": 0,
+            "14": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Dto\\UserForLoginDto.cs": {
+      "CadastroApp.API.Dto.UserForLoginDto": {
+        "System.String CadastroApp.API.Dto.UserForLoginDto::get_Username()": {
+          "Lines": {
+            "5": 0
+          },
+          "Branches": []
+        },
+        "System.String CadastroApp.API.Dto.UserForLoginDto::get_Password()": {
+          "Lines": {
+            "6": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Dto\\UserForRegisterDto.cs": {
+      "CadastroApp.API.Dto.UserForRegisterDto": {
+        "System.String CadastroApp.API.Dto.UserForRegisterDto::get_Username()": {
+          "Lines": {
+            "9": 0
+          },
+          "Branches": []
+        },
+        "System.String CadastroApp.API.Dto.UserForRegisterDto::get_Password()": {
+          "Lines": {
+            "13": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\data\\AuthRepository.cs": {
+      "CadastroApp.API.Data.AuthRepository": {
+        "System.Boolean CadastroApp.API.Data.AuthRepository::VerifyPasswordHash(System.String,System.Byte[],System.Byte[])": {
+          "Lines": {
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "62": 0,
+            "64": 0
+          },
+          "Branches": [
+            {
+              "Line": 58,
+              "Offset": 67,
+              "EndOffset": 31,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 60,
+              "Offset": 45,
+              "EndOffset": 47,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 60,
+              "Offset": 45,
+              "EndOffset": 52,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 58,
+              "Offset": 67,
+              "EndOffset": 69,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        },
+        "System.Void CadastroApp.API.Data.AuthRepository::CreatePasswordHash(System.String,System.Byte[]&,System.Byte[]&)": {
+          "Lines": {
+            "93": 0,
+            "94": 0,
+            "95": 0,
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0
+          },
+          "Branches": []
+        },
+        "System.Void CadastroApp.API.Data.AuthRepository::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "21": 0,
+            "22": 0,
+            "23": 0,
+            "24": 0
+          },
+          "Branches": []
+        }
+      },
+      "CadastroApp.API.Data.AuthRepository/<Login>d__2": {
+        "System.Void CadastroApp.API.Data.AuthRepository/<Login>d__2::MoveNext()": {
+          "Lines": {
+            "27": 0,
+            "31": 0,
+            "32": 0,
+            "33": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "38": 0,
+            "39": 0,
+            "40": 0,
+            "41": 0,
+            "42": 0,
+            "43": 0,
+            "44": 0,
+            "45": 0,
+            "47": 0,
+            "48": 0,
+            "51": 0
+          },
+          "Branches": [
+            {
+              "Line": 41,
+              "Offset": 603,
+              "EndOffset": 394,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 41,
+              "Offset": 603,
+              "EndOffset": 608,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "CadastroApp.API.Data.AuthRepository/<Register>d__4": {
+        "System.Void CadastroApp.API.Data.AuthRepository/<Register>d__4::MoveNext()": {
+          "Lines": {
+            "67": 0,
+            "71": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "76": 0,
+            "77": 0,
+            "78": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "86": 0
+          },
+          "Branches": []
+        }
+      },
+      "CadastroApp.API.Data.AuthRepository/<UserExists>d__6": {
+        "System.Void CadastroApp.API.Data.AuthRepository/<UserExists>d__6::MoveNext()": {
+          "Lines": {
+            "102": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "108": 0,
+            "109": 0,
+            "110": 0,
+            "111": 0,
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "121": 0
+          },
+          "Branches": [
+            {
+              "Line": 113,
+              "Offset": 549,
+              "EndOffset": 391,
+              "Path": 1,
+              "Ordinal": 3,
+              "Hits": 0
+            },
+            {
+              "Line": 115,
+              "Offset": 420,
+              "EndOffset": 422,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 115,
+              "Offset": 420,
+              "EndOffset": 429,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 113,
+              "Offset": 549,
+              "EndOffset": 554,
+              "Path": 0,
+              "Ordinal": 2,
+              "Hits": 0
+            }
+          ]
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\data\\ClienteRepository.cs": {
+      "CadastroApp.API.Data.ClienteRepository": {
+        "CadastroApp.API.Models.Cliente CadastroApp.API.Data.ClienteRepository::MapToValue(System.Data.SqlClient.SqlDataReader)": {
+          "Lines": {
+            "53": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0
+          },
+          "Branches": []
+        },
+        "System.Void CadastroApp.API.Data.ClienteRepository::.ctor(Microsoft.Extensions.Configuration.IConfiguration)": {
+          "Lines": {
+            "16": 0,
+            "17": 0,
+            "18": 0
+          },
+          "Branches": []
+        }
+      },
+      "CadastroApp.API.Data.ClienteRepository/<GetAll>d__2": {
+        "System.Void CadastroApp.API.Data.ClienteRepository/<GetAll>d__2::MoveNext()": {
+          "Lines": {
+            "20": 0,
+            "21": 0,
+            "22": 0,
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "28": 0,
+            "29": 0,
+            "30": 0,
+            "31": 0,
+            "32": 0,
+            "34": 0,
+            "35": 0,
+            "36": 0,
+            "37": 0,
+            "38": 0,
+            "41": 0,
+            "44": 0,
+            "45": 0,
+            "46": 0,
+            "47": 0,
+            "48": 0,
+            "51": 0
+          },
+          "Branches": [
+            {
+              "Line": 35,
+              "Offset": 681,
+              "EndOffset": 531,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 35,
+              "Offset": 681,
+              "EndOffset": 686,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "CadastroApp.API.Data.ClienteRepository/<GetById>d__4": {
+        "System.Void CadastroApp.API.Data.ClienteRepository/<GetById>d__4::MoveNext()": {
+          "Lines": {
+            "63": 0,
+            "64": 0,
+            "65": 0,
+            "66": 0,
+            "67": 0,
+            "68": 0,
+            "69": 0,
+            "71": 0,
+            "72": 0,
+            "73": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "80": 0
+          },
+          "Branches": [
+            {
+              "Line": 72,
+              "Offset": 550,
+              "EndOffset": 406,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            },
+            {
+              "Line": 72,
+              "Offset": 550,
+              "EndOffset": 555,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "CadastroApp.API.Data.ClienteRepository/<Insert>d__5": {
+        "System.Void CadastroApp.API.Data.ClienteRepository/<Insert>d__5::MoveNext()": {
+          "Lines": {
+            "82": 0,
+            "83": 0,
+            "84": 0,
+            "85": 0,
+            "86": 0,
+            "87": 0,
+            "88": 0,
+            "89": 0,
+            "90": 0,
+            "91": 0,
+            "92": 0,
+            "95": 0
+          },
+          "Branches": []
+        }
+      },
+      "CadastroApp.API.Data.ClienteRepository/<Update>d__6": {
+        "System.Void CadastroApp.API.Data.ClienteRepository/<Update>d__6::MoveNext()": {
+          "Lines": {
+            "96": 0,
+            "97": 0,
+            "98": 0,
+            "99": 0,
+            "100": 0,
+            "101": 0,
+            "102": 0,
+            "103": 0,
+            "104": 0,
+            "105": 0,
+            "106": 0,
+            "107": 0,
+            "110": 0
+          },
+          "Branches": []
+        }
+      },
+      "CadastroApp.API.Data.ClienteRepository/<DeleteById>d__7": {
+        "System.Void CadastroApp.API.Data.ClienteRepository/<DeleteById>d__7::MoveNext()": {
+          "Lines": {
+            "112": 0,
+            "113": 0,
+            "114": 0,
+            "115": 0,
+            "116": 0,
+            "117": 0,
+            "118": 0,
+            "119": 0,
+            "122": 0
+          },
+          "Branches": []
+        }
+      }
+    },
+    "C:\\Users\\fabio\\Desktop\\experimento swagger\\DotnetCoreApp\\Controllers\\AuthController.cs": {
+      "CadastroApp.API.Controllers.AuthController": {
+        "System.Void CadastroApp.API.Controllers.AuthController::.ctor(Microsoft.Extensions.Configuration.IConfiguration,CadastroApp.API.Data.AuthRepository)": {
+          "Lines": {
+            "24": 0,
+            "25": 0,
+            "26": 0,
+            "27": 0,
+            "28": 0
+          },
+          "Branches": [
+            {
+              "Line": 25,
+              "Offset": 11,
+              "EndOffset": 13,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 25,
+              "Offset": 11,
+              "EndOffset": 25,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "CadastroApp.API.Controllers.AuthController/<Post>d__3": {
+        "System.Void CadastroApp.API.Controllers.AuthController/<Post>d__3::MoveNext()": {
+          "Lines": {
+            "33": 0,
+            "34": 0,
+            "36": 0,
+            "37": 0,
+            "47": 0
+          },
+          "Branches": [
+            {
+              "Line": 34,
+              "Offset": 52,
+              "EndOffset": 54,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 34,
+              "Offset": 52,
+              "EndOffset": 165,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "CadastroApp.API.Controllers.AuthController/<Post>d__4": {
+        "System.Void CadastroApp.API.Controllers.AuthController/<Post>d__4::MoveNext()": {
+          "Lines": {
+            "50": 0,
+            "52": 0,
+            "54": 0,
+            "55": 0,
+            "56": 0,
+            "57": 0,
+            "58": 0,
+            "59": 0,
+            "60": 0,
+            "61": 0,
+            "64": 0,
+            "66": 0
+          },
+          "Branches": [
+            {
+              "Line": 58,
+              "Offset": 207,
+              "EndOffset": 209,
+              "Path": 0,
+              "Ordinal": 0,
+              "Hits": 0
+            },
+            {
+              "Line": 58,
+              "Offset": 207,
+              "EndOffset": 251,
+              "Path": 1,
+              "Ordinal": 1,
+              "Hits": 0
+            }
+          ]
+        }
+      },
+      "CadastroApp.API.Controllers.AuthController/<GenerateJwtToken>d__5": {
+        "System.Void CadastroApp.API.Controllers.AuthController/<GenerateJwtToken>d__5::MoveNext()": {
+          "Lines": {
+            "68": 0,
+            "69": 0,
+            "70": 0,
+            "71": 0,
+            "72": 0,
+            "74": 0,
+            "75": 0,
+            "77": 0,
+            "79": 0,
+            "80": 0,
+            "81": 0,
+            "82": 0,
+            "83": 0,
+            "85": 0,
+            "87": 0,
+            "89": 0,
+            "90": 0
+          },
+          "Branches": []
+        }
+      }
+    }
+  }
+}

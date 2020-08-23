@@ -406,7 +406,7 @@ namespace DotnetCoreApp.test
 ```
 > Para executar utilize o comando abaixo na pasta
 ```shell
-dotnet test
+dotnet test /p:CollectCoverage=true
 ```
 
 ## Publicação
