@@ -317,6 +317,43 @@ public class ClienteRepository
         }
 		...
 ```
+#### Outro exemplo - teste de conceito básica para Console application
+
+```C#
+using System;
+using System.Data.SqlClient;
+
+namespace poc
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {   
+            SimpleQuery();
+        }
+        
+        private static void SimpleQuery()
+        {
+            string connectionString = "Data Source=servidor;Initial Catalog=basededados;Integrated Security=False;User ID=login;Password=senha;";
+            string queryString = "SELECT @@version;";
+
+            using (SqlConnection connection = new SqlConnection(connectionString))
+            {
+                SqlCommand command = new SqlCommand(queryString, connection);
+                connection.Open();
+                using(SqlDataReader reader = command.ExecuteReader())
+                {
+                    while (reader.Read())
+                    {
+                        Console.WriteLine(String.Format("{0}",  reader[0]));
+                    }
+                }
+            }
+        }
+    }
+}
+```
+
 ## Server-Side Paging
 
 Em muitos casos - por exemplo, ao trabalhar com conjuntos de dados muito grandes - não buscamos na base de dados toda a coleção completa e armazenamos na memória. Nesse caso é usar algum tipo de paginação no servidor, onde o servidor envia apenas uma única página de cada vez. Esse é um objeto json de resposta do servidor para casos como esses:
